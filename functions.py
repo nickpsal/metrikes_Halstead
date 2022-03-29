@@ -3,8 +3,8 @@ from math import log
 
 
 def calc(n1, n2, N1, N2):
-    values = {}
     # calculate all the variables
+    values = {"n1": n1, "n2": n2, "N1": N1, "N2": N2}
     n = float(n1 + n2)
     values["Program Vocabulary Size"] = n
     N = float(N1 + N2)
@@ -31,10 +31,6 @@ def calc(n1, n2, N1, N2):
 def print_values(n1, n2, N1, N2, values):
     print("--------------------------------------------------------------------------------------------------------")
     print("The calculated Variables are:")
-    print(f"n1 = {n1}")
-    print(f"n2 = {n2}")
-    print(f"N1 = {N1}")
-    print(f"N2 = {N2}")
     for i in values.keys():
         print(f"{i} = {values[i]}")
     print("--------------------------------------------------------------------------------------------------------")
@@ -45,10 +41,6 @@ def write_to_file(n1, n2, N1, N2, values):
     f = open(filename, "w")
     f.write(" Export file values \n")
     f.write("---------------------------------------------------\n")
-    f.write(f"n1 = {n1}\n")
-    f.write(f"n2 = {n2}\n")
-    f.write(f"N1 = {N1}\n")
-    f.write(f"N2 = {N2}\n")
     for i in values.keys():
         f.write(f"{i} = {values[i]}\n")
     f.write("---------------------------------------------------\n")
