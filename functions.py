@@ -53,4 +53,3 @@ def write_to_file(n1, n2, N1, N2, values):
         f.write(f"{i} = {values[i]}\n")
     f.write("---------------------------------------------------\n")
     f.close()
-
