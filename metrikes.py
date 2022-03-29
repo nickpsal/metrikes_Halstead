@@ -11,7 +11,11 @@ while True:
         n2 = float(n2)
         N1 = float(N1)
         N2 = float(N2)
-        break
+        if n1 <= 0 or n2 <= 0 or N1 <= 0 or N2 <= 0:
+            print("Δώσατε τιμή που είναι μικρότερη ή ίση το 0")
+            continue
+        else:
+            break
     except ValueError:
         print("Δεν δώσατε νούμερο σε κάποια απο τις μεταβλητές")
         continue
@@ -30,7 +34,7 @@ B = pow(E, 2/3) / 3000
 
 # print all the calculated variables
 print("--------------------------------------------------------------------------------------------------------")
-print("The calculated Variables are")
+print("The calculated Variables are:")
 print(f"n1 = {n1}")
 print(f"n2 = {n2}")
 print(f"N1 = {N1}")
