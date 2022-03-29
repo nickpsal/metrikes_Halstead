@@ -1,53 +1,30 @@
 # Calculate Halstead Metrics
-from math import log
+from functions import *
+
+print("----------------------------------- Halstead Metrics -----------------------------------")
+print("We provide the numbers n1,n2, N1, N2 and the program calculates all the Halstead Metrics")
 
 while True:
-    n1 = input("Δώσε το n1 ")
-    n2 = input("Δώσε το n2 ")
-    N1 = input("Δώσε το N1 ")
-    N2 = input("Δώσε το N2 ")
+    n1 = input("Give n1 Value ")
+    n2 = input("Gibe n2 Value ")
+    N1 = input("Gibe the N1 Value ")
+    N2 = input("Give the N2 Value ")
     try:
         n1 = float(n1)
         n2 = float(n2)
         N1 = float(N1)
         N2 = float(N2)
         if n1 <= 0 or n2 <= 0 or N1 <= 0 or N2 <= 0:
-            print("Δώσατε τιμή που είναι μικρότερη ή ίση το 0")
+            print("Ypu vive a negative Value or zero Please give a positive Value")
             continue
         else:
             break
-    except ValueError:
-        print("Δεν δώσατε νούμερο σε κάποια απο τις μεταβλητές")
+    except ValueError as e:
+        print(e)
         continue
 
-# calculate all the variables
-n = n1 + n2
-N = N1 + N2
-Nest = n1*log(n1, 2) + n2*log(n2, 2)
-V = N*log(n, 2)
-L = (2*n2)/(n1*N2)
-lamda = L*L*V
-D = 1/L
-E = D*V
-T = E/18
-B = pow(E, 2/3) / 3000
-
+values = calc(n1, n2, N1, N2)
 # print all the calculated variables
-print("--------------------------------------------------------------------------------------------------------")
-print("The calculated Variables are:")
-print(f"n1 = {n1}")
-print(f"n2 = {n2}")
-print(f"N1 = {N1}")
-print(f"N2 = {N2}")
-print(f"n = {n}")
-print(f"N = {N}")
-print(f"Nest = {Nest}")
-print(f"V = {V}")
-print(f"L = {L}")
-print(f"lamda = {lamda}")
-print(f"D = {D}")
-print(f"E = {E}")
-print(f"T = {T}")
-print(f"B = {B}")
-print("--------------------------------------------------------------------------------------------------------")
-input("Πατήστε Κάποιο πλήκτρο για Έξοδο")
+print_values(values)
+input("Press any key for exit")
+exit()
