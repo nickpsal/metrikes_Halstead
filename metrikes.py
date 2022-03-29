@@ -25,7 +25,7 @@ while True:
 
 values = calc(n1, n2, N1, N2)
 # print all the calculated variables
-write_to_file(n1, n2, N1, N2, values)
-print_values(n1, n2, N1, N2, values)
+write_to_file(values)
+print_values(values)
 input("Press any key for exit")
 exit()

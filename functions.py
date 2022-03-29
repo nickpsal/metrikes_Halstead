@@ -28,7 +28,7 @@ def calc(n1, n2, N1, N2):
     return values
 
 
-def print_values(n1, n2, N1, N2, values):
+def print_values(values):
     print("--------------------------------------------------------------------------------------------------------")
     print("The calculated Variables are:")
     for i in values.keys():
@@ -36,7 +36,7 @@ def print_values(n1, n2, N1, N2, values):
     print("--------------------------------------------------------------------------------------------------------")
 
 
-def write_to_file(n1, n2, N1, N2, values):
+def write_to_file(values):
     filename = str(n1) + " , " + str(n2) + " , " + str(N1) + " , " + str(N2) + ".txt"
     f = open(filename, "w")
     f.write(" Export file values \n")
