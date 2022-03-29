@@ -15,7 +15,7 @@ while True:
         N1 = float(N1)
         N2 = float(N2)
         if n1 <= 0 or n2 <= 0 or N1 <= 0 or N2 <= 0:
-            print("Ypu vive a negative Value or zero Please give a positive Value")
+            print("You vive a negative Value or zero Please give a positive Value")
             continue
         else:
             break
@@ -25,6 +25,6 @@ while True:
 
 values = calc(n1, n2, N1, N2)
 # print all the calculated variables
-print_values(values)
+print_values(n1, n2, N1, N2, values)
 input("Press any key for exit")
 exit()
