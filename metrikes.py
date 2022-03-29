@@ -2,7 +2,7 @@
 from functions import *
 
 print("----------------------------------- Halstead Metrics -----------------------------------")
-print("We provide the numbers n1,n2, N1, N2 and the program calculates all the Halstead Metrics")
+print("We provide the numbers n1, n2, N1, N2 and the program calculates all the Halstead Metrics")
 
 while True:
     n1 = input("Give n1 Value ")
