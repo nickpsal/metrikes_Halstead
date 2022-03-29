@@ -5,25 +5,25 @@ from math import log
 def calc(n1, n2, N1, N2):
     values = []
     # calculate all the variables
-    n = n1 + n2
+    n = float(n1 + n2)
     values.append(n)
-    N = N1 + N2
+    N = float(N1 + N2)
     values.append(N)
-    Nest = n1 * log(n1, 2) + n2 * log(n2, 2)
+    Nest = float(n1 * log(n1, 2) + n2 * log(n2, 2))
     values.append(Nest)
-    V = N * log(n, 2)
+    V = float(N * log(n, 2))
     values.append(V)
-    L = (2 * n2) / (n1 * N2)
+    L = float((2 * n2) / (n1 * N2))
     values.append(L)
-    lamda = L * L * V
+    lamda = float(L * L * V)
     values.append(lamda)
-    D = 1 / L
+    D = float(1 / L)
     values.append(D)
-    E = D * V
+    E = float(D * V)
     values.append(E)
-    T = E / 18
+    T = float(E / 18)
     values.append(T)
-    B = pow(E, 2.0 / 3.0) / 3000
+    B = float(pow(E, 2.0 / 3.0) / 3000)
     values.append(B)
     return values
 
