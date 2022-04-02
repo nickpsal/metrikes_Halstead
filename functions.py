@@ -37,9 +37,9 @@ def print_values(values):
 
 
 def write_to_file(values):
-    filename = str(n1) + " , " + str(n2) + " , " + str(N1) + " , " + str(N2) + ".txt"
+    filename = str(values["n1"]) + " , " + str(values["n2"]) + " , " + str(values["N1"]) + " , " + str(values["N2"]) + ".txt"
     f = open(filename, "w")
-    f.write(" Export file values \n")
+    f.write("Export file values \n")
     f.write("---------------------------------------------------\n")
     for i in values.keys():
         f.write(f"{i} = {values[i]}\n")
