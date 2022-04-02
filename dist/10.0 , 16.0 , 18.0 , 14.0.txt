@@ -1,0 +1,17 @@
+Export file values 
+---------------------------------------------------
+n1 = 10.0
+n2 = 16.0
+N1 = 18.0
+N2 = 14.0
+Program Vocabulary Size = 26.0
+Program Length = 32.0
+Program Length Estimator = 97.21928094887363
+Program Volume = 150.41407098051496
+Program Level = 0.22857142857142856
+Language Level = 7.858367790002414
+Program Difficulty = 4.375
+Program Effort = 658.0615605397529
+Program Implementation Time = 36.55897558554183
+Program Errors Estimator = 0.025218723146970386
+---------------------------------------------------
