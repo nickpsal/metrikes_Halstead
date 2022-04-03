@@ -6,25 +6,27 @@ def calc(n1, n2, N1, N2):
     # calculate all the variables
     values = {"n1": n1, "n2": n2, "N1": N1, "N2": N2}
     n = float(n1 + n2)
-    values["Program Vocabulary Size"] = n
+    values["n = n1 + n2 = "] = n
     N = float(N1 + N2)
-    values["Program Length"] = N
+    values["N = N1 + N2 = "] = N
     Nest = float(n1 * log(n1, 2) + n2 * log(n2, 2))
-    values["Program Length Estimator"] = Nest
+    values["Nest "] = Nest
+    Nest_N = Nest / N
+    values["Nest / N = "] = Nest_N
     V = float(N * log(n, 2))
-    values["Program Volume"] = V
+    values["V = N*log2n = "] = V
     L = float((2 * n2) / (n1 * N2))
-    values["Program Level"] = L
+    values["L = Lest = "] = L
     lamda = float(L * L * V)
-    values["Language Level"] = lamda
+    values["λ = L * L * V = "] = lamda
     D = float(1 / L)
-    values["Program Difficulty"] = D
+    values["D = 1 / L = "] = D
     E = float(D * V)
-    values["Program Effort"] = E
+    values["E = D * V = "] = E
     T = float(E / 18)
-    values["Program Implementation Time"] = T
+    values["T = E / 18 = "] = T
     B = float(pow(E, 2.0 / 3.0) / 3000)
-    values["Program Errors Estimator"] = B
+    values["B = E^(2/3) / 3000 = "] = B
     return values
 
 
